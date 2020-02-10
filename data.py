@@ -117,7 +117,7 @@ class Vocab():
 
     def add_embedding(self, gloveFile="path_for_glove_embedding", embed_size=100):
         print("Loading Glove embeddings")
-        with open(gloveFile, 'r') as f:
+        with open(gloveFile, 'r', encoding="utf-8") as f:
             model = {}
             w_set = set(self.word_list)
             embedding_matrix = np.zeros(shape=(len(self.word_list), embed_size))
